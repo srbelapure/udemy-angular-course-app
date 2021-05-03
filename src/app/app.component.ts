@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'udemy-course-project';
+  featureToBeLoaded='recipe';
+  onNavigate(featureSelected:string){
+    this.featureToBeLoaded= featureSelected;
+  }
 }
