@@ -10,13 +10,11 @@ import { RecipeService } from '../../recipe.service';
 export class RecipeItemComponent implements OnInit {
 //@Input() -> we get value of "recipe" from recipe-list.component *ngFor[to get data feom outside we use @Input() decorator]
   @Input() recipe:Recipe;
-  constructor(private recipeService:RecipeService) { }
+  @Input() index:number;
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  onRecipeItemSelect(){
-    this.recipeService.recipeSelected.emit(this.recipe)
-  }
 
 }
