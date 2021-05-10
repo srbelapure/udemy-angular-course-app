@@ -8,7 +8,6 @@ import { Recipe } from './recipe.model';
 })
 export class RecipeService {
 
-  public recipeSelected = new EventEmitter<Recipe>();
   private recipes:Recipe[]=[
     new Recipe('A test recipe', "test description","https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmVjaXBlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",[
       new Ingredient('cereal',1),
