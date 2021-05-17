@@ -1,0 +1,7 @@
+input.number-input-type{
+    min-width: 50px;
+}
+
+input[formcontrolname="amount"]{
+    width: 70px;
+}

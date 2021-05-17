@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Recipe } from '../recipe.model';
@@ -31,7 +32,12 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   onEditRecipe(){
-this.router.navigate(['edit'],{relativeTo:this.route})
+    this.router.navigate(['edit'],{relativeTo:this.route})
+  }
+
+  onDeleteRecipe(){
+    this.recipeSercive.deleteRecipe(this.id)
+    this.router.navigate(['/recipes']);
   }
 
 }
