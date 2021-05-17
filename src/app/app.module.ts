@@ -7,10 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
 import { AlertComponent } from './shared/alert/alert/alert.component';
-import { RecipesModule } from './recipes/recipes.module';
-import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { SharedModule } from './shared/shared.module';
-import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -21,10 +18,10 @@ import { AuthModule } from './auth/auth.module';
     BrowserModule,
     AppRoutingModule, // module for routing
     HttpClientModule,
-    RecipesModule,
-    ShoppingListModule,
+    //RecipesModule, comment this coz we are loading it lazily, if not commented then it loads both eagerly and lazily
+    //ShoppingListModule, comment this coz we are loading it lazily, if not commented then it loads both eagerly and lazily
     SharedModule,
-    AuthModule
+    //AuthModule  comment this coz we are loading it lazily, if not commented then it loads both eagerly and lazily
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

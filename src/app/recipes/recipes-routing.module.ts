@@ -7,8 +7,9 @@ import { RecipeStartComponent } from "./recipe-start/recipe-start.component";
 import { RecipesResolverService } from "./recipes-resolver.service";
 import { RecipesComponent } from "./recipes.component";
 
+//for lazy loading set the path to "", then go to app-routing module and set path, use loadChildren property
 const routes:Routes=[
-    {path:"recipes", 
+    {path:"", 
     component:RecipesComponent , 
     canActivate:[AuthGuard],
     children:[
